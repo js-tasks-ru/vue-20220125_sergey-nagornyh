@@ -6,21 +6,15 @@ import MeetupView from '../06-MeetupView/MeetupView.js';
 
 export default defineComponent({
   name: 'PageMeetup',
-  props: {
-    meetupId: {
-      type: Number,
-      required: true,
-    },
-  },
   components: {
     UiAlert,
     UiContainer,
     MeetupView,
   },
-  watch: {
+  props: {
     meetupId: {
-      immediate: true,
-      handler: 'updateMeetup',
+      type: Number,
+      required: true,
     },
   },
   data() {
@@ -28,6 +22,12 @@ export default defineComponent({
       meetup: null,
       error: null,
     };
+  },
+  watch: {
+    meetupId: {
+      immediate: true,
+      handler: 'updateMeetup',
+    },
   },
   methods: {
     updateMeetup() {
