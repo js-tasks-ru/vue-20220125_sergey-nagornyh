@@ -7,9 +7,9 @@ export default defineComponent({
     agenda: {
       type: Array,
       required: true,
-    }
+    },
   },
-  components: {MeetupAgendaItem},
+  components: { MeetupAgendaItem },
   template: `
     <ul class="agenda">
       <li class="agenda__item" v-for="agendaItem in agenda" :key="agendaItem.id">

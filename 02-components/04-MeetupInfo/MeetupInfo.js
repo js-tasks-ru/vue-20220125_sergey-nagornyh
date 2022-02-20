@@ -14,22 +14,19 @@ export default defineComponent({
     date: {
       type: Number,
       required: true,
-    }
+    },
   },
   computed: {
     normalizeDate() {
-      return new Date(this.date).toLocaleDateString(
-        navigator.language,
-        {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        }
-      );
+      return new Date(this.date).toLocaleDateString(navigator.language, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
     },
     normalizeDateTime() {
       return new Date(this.date).toISOString().substr(0, 10);
-    }
+    },
   },
   template: `
     <ul class="meetup-info">

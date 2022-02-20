@@ -6,7 +6,7 @@ export default defineComponent({
     count: {
       type: Number,
       default: 0,
-    }
+    },
   },
   emits: ['update:count'],
 

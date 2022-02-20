@@ -20,14 +20,14 @@ export default defineComponent({
   watch: {
     meetupId: {
       immediate: true,
-      handler: 'updateMeetup'
-    }
+      handler: 'updateMeetup',
+    },
   },
   data() {
     return {
       meetup: null,
       error: null,
-    }
+    };
   },
   methods: {
     updateMeetup() {
@@ -35,8 +35,8 @@ export default defineComponent({
       this.error = null;
 
       fetchMeetupById(this.meetupId)
-        .then(response => this.meetup = response)
-        .catch(error => this.error = error.message)
+        .then((response) => (this.meetup = response))
+        .catch((error) => (this.error = error.message));
     },
   },
 

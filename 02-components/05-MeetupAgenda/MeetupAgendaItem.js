@@ -9,7 +9,7 @@ export default defineComponent({
     agendaItem: {
       type: Object,
       required: true,
-    }
+    },
   },
   computed: {
     iconSrc() {
@@ -18,10 +18,10 @@ export default defineComponent({
       return `/assets/icons/icon-${iconName}.svg`;
     },
     metupTime() {
-      return `${this.agendaItem.startsAt} - ${this.agendaItem.endsAt}`
+      return `${this.agendaItem.startsAt} - ${this.agendaItem.endsAt}`;
     },
     metupTitle() {
-      return this.agendaItem.title || this.$options.agendaItemDefaultTitles[this.agendaItem.type]
+      return this.agendaItem.title || this.$options.agendaItemDefaultTitles[this.agendaItem.type];
     },
   },
   template: `
