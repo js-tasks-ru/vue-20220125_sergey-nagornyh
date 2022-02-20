@@ -39,7 +39,6 @@ export default defineComponent({
         .catch((error) => (this.error = error.message));
     },
   },
-
   template: `
     <div class="page-meetup">
       <MeetupView v-if="meetup" :meetup="meetup"/>
