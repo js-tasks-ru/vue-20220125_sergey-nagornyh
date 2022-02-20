@@ -26,9 +26,6 @@ export default defineComponent({
       required: true,
     },
   },
-  computed: {
-
-  },
   template: `
     <div>
       <MeetupCover :title="meetup.title" :image="meetup.image"/>
